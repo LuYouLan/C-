@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main (void)
+{
+	cout<<"**********a"<<'\n'<<"*********aa"<<'\n'<<"********aaa"<<'\n';
+	cout<<"*******aaaa"<<'\n'<<"******aaaaa"<<'\n'<<"*****aaaaaa"<<'\n'<<"****aaaaaaa"<<'\n';
+	cout<<"***aaaaaaaa"<<'\n'<<"**aaaaaaaaa"<<'\n'<<"*aaaaaaaaaa";
+	return 0;
+}
