@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	char c;
+	int nu=0;
+	cout<<"请输入随意数量的随意字符"<<endl; 
+	while(cin.get(c))
+	{
+		if(c=='\n')
+		break;
+		else if(c==' ')
+		nu++;
+	}
+	cout<<"空格字数="<<nu;
+	system("pause");
+	return 0;
+}
