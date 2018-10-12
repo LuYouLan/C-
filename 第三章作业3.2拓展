@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	char c;
+	int el=0,sp=0,nu=0,other=0;
+	cout<<"请输入随意数量的随意字符"<<endl; 
+	while(cin.get(c))
+	{
+		if(c=='\n')
+		break;
+		if(c>='a'&&c<='z')
+		el++;
+		else if(c>='0'&&c<=9)
+		nu++;
+		else if(c==' ')
+		sp++;
+		else
+		other++;
+	}
+	cout<<"英文字数个数="<<el<<"数字个数="<<nu<<"空格字数="<<sp<<"其他字符个数="<<other<<endl;
+	system("pause");
+	return 0;
+}
