@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+float ave(float a,float b,float c,float d)
+{
+	cout<<"这四个数的平均值为："<<(a+b+c+d)/4<<endl; 
+}
+main()
+{
+	float a, b, c, d;
+	cout<<"请输入任意四个数："<<endl;
+	cin>>a>>b>>c>>d;
+	ave(a,b,c,d);
+	return 0; 
+}
