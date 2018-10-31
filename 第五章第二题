@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int min(int,int);
+float min(float,float);
+int main()
+{
+	int a,b,x;
+	float c,d,y;
+	cout<<"请输入两个整数："<<endl;
+	cin>>a>>b;
+	x=min(a,b);
+	cout<<"最小值为："<<x<<endl;
+	cout<<"请输入两个实数："<<endl;
+	cin>>c>>d;
+	y=min(c,d);
+	cout<<"最小值为："<<y<<endl;
+	return 0;
+}
+int min(int x,int y)
+{
+	return(x<y?x:y);
+}
+float min(float x,float y)
+{
+	return(x<y?x:y);
+ } 
