@@ -1,0 +1,75 @@
+#include<iostream>
+using namespace std;
+#define MAX_SIZE 50
+typedef struct
+{
+	int stack[MAX_SIZE];
+	int top;
+}Stack;
+int main()
+{
+	Stack st;
+	st.top=-1;
+	char ch;
+	bool flag=false;
+	while(cin.get(ch)&&ch!='\n')
+	{
+		switch(ch)
+		{
+			case'(':
+				st.stack[++st.top]=ch;
+				break;
+			case')':
+				if(st.stack[st.top]=='(')
+				{
+					st.top--;
+					break;
+				}
+				else
+				{
+					cout<<"Don 't match!"<<endl;
+					flag=true;
+					break;
+				}
+			case'[':
+				st.stack[++st.top]=ch;
+				break;
+			case']':
+				if(st.stack[st.top]=='[')
+				{
+					st.top--;
+					break;
+				}
+				else
+				{
+					cout<<"Don't match!"<<endl;
+					flag=true;
+					break;
+				}
+			case'{':
+				st.stack[++st.top]=ch;
+				break;
+			case'}':
+			if(st.stack[st.top]=='{')
+			{
+			st.top--;
+			break;	
+			}
+			else
+			{
+				cout<<"Don't match!"<<endl;
+				flag=true;
+				break;
+			}	
+			default:
+				break;
+		}
+	}
+	if(!flag)
+	{
+		cout<<"not correct"<<endl;
+	}
+	else
+	cout<<"correct"<<endl;
+	return 0;
+}
