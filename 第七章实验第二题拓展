@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+void rsum(int a[][3], int row, int b[])
+{
+	for(int i=0;i<row;i++)
+	{
+		b[i]=0;
+		for(int j=0;j<3;j++)
+		b[i]+=a[i][j];
+	}
+}
+void qsun(int a[4][3],int line, int c[])
+{
+	for(int j=0;j<line;j++)
+	{
+	c[j]=0;
+	for(int i=0;i<4;i++)
+	c[j]+=a[i][j];	
+	}
+}
+int main()
+{
+	int a[4][3]={{89,78,56},{88,99,100},{72,80,61},{60,70,75}},b[4],c[3],i ,j;
+    cout<<"该小组成绩表为："<<endl;
+	for(i=0;i<4;i++)
+	{
+		for(j=0;j<3;j++)
+		cout<<a[i][j]<<'\t';
+		cout<<endl;
+	}
+	rsum(a,4,b);
+	for(i=0;i<4;i++)
+	cout<<"学生"<<i+1<<"的成绩平均分为："<<b[i]/3<<endl;
+	qsun(a,3,b);
+	for(j=0;j<3;j++)
+	cout<<"学科"<<j+1<<"的成绩平均分为："<<c[j]/4<<endl; 
+	return 0;
+}
