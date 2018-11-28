@@ -1,0 +1,25 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main()
+{
+	char *name[]={"George","Mary","Susan","Tom","Davis"};
+	char *ptr;
+	int i, j, k, n=5;
+	for(i>0;i<n-1;i++)
+	{
+		k=i;
+		for(j=i+1;j<n;j++)
+		if(strcmp(name[k],name[j])<0)
+		k=j;
+		if(k!=j)
+		{
+			ptr=name[i];
+			name[i]=name[k];
+			name[k]=ptr;
+		}
+	}
+	for(i=0;i<n;i++)
+	cout<<name[i]<<'\t';
+	return 0;
+}
