@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+void stat(char *str, int *letters, int *digits, int *spaces, int *others)
+{
+	char ch;
+
+	for (; *str; str++)
+	{
+		ch = *str;
+		if (('a' <= ch&&ch <= 'z') || ('A' <= ch&&ch <= 'Z'))
+			(*letters)++;
+		else if ('0' <= ch && ch <= '9')
+			(*digits)++;
+		else if (ch == ' ')
+			(*spaces)++;
+		else
+			(*others)++;
+	}
+}
+int main()
+{
+	char str[100];
+	int letters = 0, digits = 0, spaces = 0, others = 0;
+
+	cin.getline(str, 100);             	      
+	stat(str, &letters, &digits, &spaces, &others); 
+	cout << "letters=" << letters << endl;
+	cout << " digits=" << digits << endl;
+	cout << " spaces=" << spaces << endl;
+	cout << " others=" << others << endl;
+	return 0;
+}
+
