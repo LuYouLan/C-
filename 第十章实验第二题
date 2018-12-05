@@ -1,0 +1,83 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+class Teacher
+{
+	char  Num[10];
+	char  Name[10];
+	char  Sex;
+	char  Addr[40];
+	char  Tel[10];
+	char  Email[20];
+	char  Headship[20];
+	char  Post[20];
+	int   Salary;
+public:
+	void  SetNum(char *num)
+	{
+		strcpy(Num, num);
+	}
+	void  SetName(char *name)
+	{
+		strcpy(Name, name);
+	}
+	void  SetSex(char sex)
+	{
+		Sex = sex;
+	}
+	void  SetAddr(char *addr)
+	{
+		strcpy(Addr, addr);
+	}
+	void  SetTel(char *tel)
+	{
+		strcpy(Tel, tel);
+	}
+	void  SetEmail(char *email)
+	{
+		strcpy(Email, email);
+	}
+	void  SetHeadship(char *headship)
+	{
+		strcpy(Headship, headship);
+	}
+	void  SetPost(char *post)
+	{
+		strcpy(Post, post);
+	}
+	void  SetSalary(int salary)
+	{
+		Salary = salary;
+	}
+	void  OutputInfo();
+};
+
+void Teacher::OutputInfo()
+{
+	cout << "Num: " << Num << "\n";
+	cout << "Name: " << Name << "\n";
+	cout << "Sex: " << Sex << "\n";
+	cout << "Addr: " << Addr << "\n";
+	cout << "Tel: " << Tel << "\n";
+	cout << "Email: " << Email << "\n";
+	cout << "Headship: " << Headship << "\n";
+	cout << "Post: " << Post << "\n";
+	cout << "Salary: " << Salary << "\n";
+}
+
+int main()
+{
+	Teacher  teach;
+	teach.SetNum("70201379");
+	teach.SetName("Wang Song");
+	teach.SetSex('m');
+	teach.SetAddr("Yu Dao Street 30#");
+	teach.SetTel("84898888");
+	teach.SetEmail("Wangsong@163.net");
+	teach.SetHeadship("Dean");
+	teach.SetPost("Professor");
+	teach.SetSalary(5000);
+	teach.OutputInfo();
+	return 0;
+}
