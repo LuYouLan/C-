@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+class complex
+{
+	double real, image;
+public:
+	void setreal(double r)
+	{
+		real = r;
+	}
+	void setimage(double i)
+	{
+		image = i;
+	}
+	double getreal()
+	{
+		return(real);
+	}
+	double getimage()
+	{
+		return(image);
+	}
+	void output()
+	{
+		if (image<0)
+			cout << real << image << 'i';
+		else if (image>0)
+			cout << real << '+' << image << 'i';
+		else
+			cout << real;
+		cout << '\n';
+	}
+};
+int main()
+{
+	complex c1, c2;
+
+	c1.setreal(1);
+	c1.setimage(2);
+	cout << "c1=";
+	c1.output();
+
+	c2.setreal(3);
+	c2.setimage(4);
+	cout << "c2=";
+	c2.output();
+
+	double a, b;
+	a = c2.getreal();
+	b = c2.getimage();
+	cout << a << ',' << b << endl;
+	return 0;
+}
